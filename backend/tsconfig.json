@@ -1,5 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@schemas/*": ["schemas/*"],
+      "@config/*": ["config/*"],
+      "@routes/*": ["routes/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@utils/*": ["utils/*"],
+      "@types": ["types.ts"]
+    },
     "target": "es6",
     "module": "commonjs",
     "rootDir": "./",
@@ -13,5 +23,7 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*", "index.ts"],
+  "exclude": ["node_modules"]
 }
