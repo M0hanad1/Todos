@@ -1,4 +1,8 @@
-import { Document } from "mongoose";
+export interface IReqUser {
+  id: string;
+  role: Roles;
+  email: string;
+}
 
 export enum Roles {
   ADMIN = "ADMIN",
@@ -17,16 +21,17 @@ export enum Status {
   ERROR = "ERROR",
 }
 
-export interface IUser extends Document {
+export interface IUser {
   name: string;
   email: string;
   password: string;
   role: Roles;
 }
 
-export interface ITask extends Document {
+export interface ITask {
   title: string;
   description?: string;
   priority: Priority;
   completed: boolean;
+  userId: string;
 }

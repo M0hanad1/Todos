@@ -22,6 +22,12 @@ const taskSchema = new Schema<ITask>({
     required: true,
     default: false,
   },
+  userId: {
+    type: String,
+    required: true,
+    index: true,
+    ref: "User",
+  },
 });
 
 const Task = model("Task", taskSchema);

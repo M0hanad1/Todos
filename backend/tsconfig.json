@@ -2,13 +2,8 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@schemas/*": ["schemas/*"],
-      "@config/*": ["config/*"],
-      "@routes/*": ["routes/*"],
-      "@controllers/*": ["controllers/*"],
-      "@middlewares/*": ["middlewares/*"],
-      "@utils/*": ["utils/*"],
-      "@types": ["types.ts"]
+      "@types": ["types/types.ts"],
+      "@*": ["./*"]
     },
     "target": "es6",
     "module": "commonjs",
