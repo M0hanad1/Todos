@@ -1,5 +1,7 @@
+import { Types } from "mongoose";
+
 export interface IReqUser {
-  id: string;
+  id: Types.ObjectId;
   role: Roles;
   email: string;
 }
