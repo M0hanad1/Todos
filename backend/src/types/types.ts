@@ -35,5 +35,5 @@ export interface ITask {
   description?: string;
   priority: Priority;
   completed: boolean;
-  userId: string;
+  user: Types.ObjectId;
 }

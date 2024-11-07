@@ -7,13 +7,13 @@ import { verify } from "jsonwebtoken";
 export default function auth(req: Request, _res: Response, next: NextFunction) {
   const token = req.headers.authorization;
   if (!token) {
-    return next(new AppError(401, Status.ERROR, "Token is required"));
+    return next(new AppError(401, Status.FAIL, "Token is required"));
   }
   try {
     const currentUser = verify(token, JWT_SECRET) as IReqUser;
     req.user = currentUser;
     next();
   } catch {
-    return next(new AppError(401, Status.ERROR, "Invalid Token"));
+    return next(new AppError(401, Status.FAIL, "Invalid Token"));
   }
 }

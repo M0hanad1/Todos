@@ -9,7 +9,6 @@ const taskSchema = new Schema<ITask>({
   description: {
     type: String,
     required: false,
-    unique: true,
   },
   priority: {
     type: String,
@@ -22,8 +21,8 @@ const taskSchema = new Schema<ITask>({
     required: true,
     default: false,
   },
-  userId: {
-    type: String,
+  user: {
+    type: Schema.Types.ObjectId,
     required: true,
     index: true,
     ref: "User",

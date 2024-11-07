@@ -8,7 +8,7 @@ export default function allow(...roles: Roles[]) {
       return next(
         new AppError(
           401,
-          Status.ERROR,
+          Status.FAIL,
           "Not allowed to access with current role"
         )
       );
